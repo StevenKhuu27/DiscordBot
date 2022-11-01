@@ -16,3 +16,9 @@ Current functionality of this bot is returning dog and cat images using the foll
 * Within the .env file, replace the empty < token params >, with your DISCORd_TOKEN, client ID and guildID, these can be found from the developer portal and the guild ID should be the serverID from dicord.
 * run the deploy commands file command, 'node deploy-commands'. This will get every js file from the commands folder and create commands of them.
 * Commands can be run by typing in the message "/<commandName>"
+
+#### Docker
+Alternatively, you can run this bot as a docker container.
+* cd .., to get out of the working directory
+* build the image with a 'docker build -t <name of image> <working_directory>', which should give an image_ID as well. Images can be observed with a 'docker images'
+* 'docker run <image_ID>' will run the container and the bot will be up and running.
