@@ -22,19 +22,11 @@ for (const file of commandFiles) {
   client.commands.set(command.data.name, command)
 }
 
-
+// Signals that the bot is logged in
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-
+// command handler function for interactions, from the command-handler.js
 client.on('interactionCreate', commandHandler.command );
-
-// client.on('messageCreate', (msg) => {
-//   interval = setInterval( () => {
-//     console.log("hi")
-//     msg.send({content: "Yep, so thats the sitch"})
-//   }, 5000)
-//   console.log(msg)
-// })
 
 client.login(process.env.DISCORD_TOKEN);
